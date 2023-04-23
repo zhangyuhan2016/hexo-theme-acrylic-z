@@ -3,48 +3,58 @@
   中文
 </div>
 
-# hexo-theme-Acrylic
+# hexo-theme-acrylic-z
+> Forked form hexo-theme-Acrylic/Hexo-Theme-Acrylic, Add some of me own style.
 
-![封面图](https://raw.githubusercontent.com/hexo-theme-Acrylic/JS-Acrylic/main/hhis5p.webp)
 
-主题预览:  🤟[Heo](https://blog.zhheo.com/) ||  👍 [满心](https://blog.lovelu.top/)  ||  🤞 [Jayhrn](https://blog.jayhrn.com/)
-
-文档: 📖 [https://acrylic.zhheo.com/](https://acrylic.zhheo.com/)
-
-一款基于[hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-butterfly)修改的主题
+基于[Hexo-Theme-Acrylic](https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic)修改的用于个人网站的Hexo主题
 
 ## 💻 安裝
 
-### Git 安裝
+<details>
+<summary>Git 安裝</summary>
 
 在博客根目录里安装稳定版【推荐】
 
 ```powershell
-git clone -b main https://github.com/hexo-theme-Acrylic/hexo-theme-Acrylic.git themes/Acrylic
+git clone -b main https://github.com/zhangyuhan2016/hexo-theme-acrylic-z.git themes/acrylic-z
 ```
 
 在博客根目录里安装最新版【推荐】
 
 ```powershell
-git clone -b dev https://github.com/hexo-theme-Acrylic/hexo-theme-Acrylic.git themes/Acrylic
+git clone -b dev https://github.com/zhangyuhan2016/hexo-theme-acrylic-z.git themes/acrylic-z
 ```
+
+</details>
 
 ### npm 安裝
 
-暂不支持，因为我不会
+```
+# npm
+npm i hexo-theme-acrylic-z
+
+# yarn
+yarn add hexo-theme-acrylic-z
+```
 
 ## ⚙ 应用主题
 
-修改hexo配置文件`_config.yml`，把主题改为`Acrylic`
+修改hexo配置文件`_config.yml`，把主题改为`acrylic-z`
 
 ```
-theme: Acrylic
+theme: acrylic-z
 ```
 
 >如果你没有pug以及stylus的渲染器，请下载安装： ```npm install hexo-renderer-pug hexo-renderer-stylus --save```
 
 ## ✨ 贡献者
-> 欢迎你加入我们Acrylic组织
+> 该主题属于个人修改定制，不保证接受PR。
+> 
+> 如果您有一些好的想法，欢迎您加入原本的Acrylic组织，贡献您的力量！
+
+
+## 致谢原本的 hexo-theme-Acrylic 团队
 
 ### 参与开发
 [@Marcus](https://github.com/MarcusYYDS)
@@ -65,17 +75,16 @@ theme: Acrylic
 [@张洪Heo](https://github.com/zhheo)
 [@Acozycotage](https://github.com/Acozycotage)
 
-## 开发进度
-50%
 
 ## 更好的配置
 - macos/linux
 在博客根目录运行
 ```bash
-cp -rf ./themes/Acrylic/_config.yml ./_config.Acrylic.yml
+cp -rf ./themes/acrylic-z/_config.yml ./_config.acrylic-z.yml
 ```
 - windows
-复制```/themes/Acrylic/_config.yml```此文件到hexo根目录，并重命名为```_config.Acrylic.yml```
+复制```/themes/acrylic-z/_config.yml```此文件到hexo根目录，并重命名为```_config.acrylic-z.yml```
 
-## 仓库统计
-![仓库统计](https://repobeats.axiom.co/api/embed/d7b318f1bf6a566495cf126196194f6145ee63a6.svg "Repobeats analytics image")
+## 版权
+
+延用原仓库**Apache-2.0**协议。

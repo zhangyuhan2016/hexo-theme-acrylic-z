@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions about Butterfly
+    url: https://github.com/zhangyuhan2016/hexo-theme-acrylic-z/discussions
+    about: 一些使用問題請到 Discussion 詢問。 Please ask questions in Discussion.

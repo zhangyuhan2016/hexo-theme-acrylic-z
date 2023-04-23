@@ -1,15 +1,14 @@
 {
-	"description": "A beautiful, powerful, and efficient Hexo theme developed by the hexo-theme-Acrylic team",
-	"version": "0.0.2",
-	"author": "Hexo-Theme-Acrylic<Acrylic@marcus233.top>",
+	"description": "A beautiful, powerful, and efficient Hexo theme developed by the hexo-theme-Acrylic team, Add some of me own style.",
+	"version": "0.0.1",
+	"author": "zhangyuhan2016",
 	"license": "Apache-2.0",
 	"bugs": {
-		"url": "https://github.com/hexo-theme-Acrylic/hexo-theme-Acrylic/issues",
-		"email": "Acrylic@marcus233.top"
+		"url": "https://github.com/zhangyuhan2016/hexo-theme-acrylic-z/issues"
 	},
 	"main": "package.json",
 	"homepage": "https://Acrylic.zhheo.com/",
-	"keywords": ["hexo", "theme", "butterfly","hexo-theme-Acrylic"],
+	"keywords": ["hexo", "theme", "butterfly","hexo-theme-Acrylic","hexo-theme-acrylic-z"],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -17,9 +16,9 @@
 		"hexo-renderer-pug": "^3.0.0",
 		"hexo-renderer-stylus": "^2.1.0"
 	},
-	"name": "hexo-theme-Acrylic",
+	"name": "hexo-theme-acrylic-z",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/hexo-theme-Acrylic/hexo-theme-Acrylic.git"
+		"url": "https://github.com/zhangyuhan2016/hexo-theme-acrylic-z.git"
 	}
 }
