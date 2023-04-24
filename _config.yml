@@ -11,24 +11,12 @@
 #  left_groups:
 #    enable: true
 #    group:
-#      - title: 博客
+#      - title: 更多
 #        a_item:
-#          - text: 主页
+#          - text: 导航
 #            link: https://zhheo.com/
-#            img: https://p.zhheo.com/20232e121c3fb2daa71897d26a515e030f49073402.png!cover_mini
 #            class: out
-#          - text: 博客
-#            link: /
-#            img: https://p.zhheo.com/20234681e06b8e086aa5b15481cb89fd38c7071002.png!cover_mini
-#            class: out
-#          - text: 图片博客
-#            link: https://plog.zhheo.com/
-#            img: https://p.zhheo.com/20236a16354d7c333cc7595efaee4b8c5667074602.png!cover_mini
-#            class: out
-#          - text: 开发博客
-#            link: https://apps.zhheo.com/
-#            img: https://p.zhheo.com/2023042bb31614949504f9ac59b134ce971d075802.png!cover_mini
-#            class: out
+#
 #  logo:
 #    enable: true
 #    class: i_class #i_class/text/img
@@ -132,15 +120,15 @@
 #    enable: false
 #  info:
 #    right:
-#      # - 🤖️ 数码爱好者
-#      # - 🔍 分享与热心帮助
-#      # - 🏠 智能家居小能手
-#      # - 🔨 开发小萌新
+#    # - 🤖️ 数码爱好者
+#    # - 🔍 分享与热心帮助
+#    # - 🏠 智能家居小能手
+#    # - 🔨 开发小萌新
 #    left:
-#      # - 专修交互设计 🤝
-#      # - 脚踏实地行动派 🏃
-#      # - 专攻各种困难 🧱
-#      # - 人狠话不多 💢
+#    # - 专修交互设计 🤝
+#    # - 脚踏实地行动派 🏃
+#    # - 专攻各种困难 🧱
+#    # - 人狠话不多 💢
 #  job: #学生、独立开发者、博主
 #  live: #中国，北京市
 #  born: #1997
@@ -247,7 +235,7 @@
 #  position: both
 #  # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
 #  default_cover:
-#    # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+#  # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
 #
 ## 即刻短文（默认关闭）
 #bbTimeList:
@@ -449,44 +437,8 @@
 #    enable: true
 #    url: https://acrylic.leonus.cn/i/2023/03/05/vyviio.webp
 #  footer_group:
-#    enable: true
+#    enable: false
 #    footer_group_link:
-#      - group_title: 软件
-#        footer_links:
-#          - text: 敲木鱼
-#            link: /stars/
-#            class: in
-#          - text: 轻节食
-#            link: /sentence/
-#            class: in
-#          - text: DelSpace3
-#            link: /zone/
-#            class: in
-#          - text: 比例计
-#            link: /fcircle/
-#            class: in
-#      - group_title: 产品
-#        footer_links:
-#          - text: 设计报告
-#            link: /about/
-#            class: in
-#          - text: 优质报告
-#            link: /atom.xml
-#            class: in
-#      - group_title: 设计
-#        footer_links:
-#          - text: Heocan
-#            link: /categories/博客相关
-#            class: in
-#          - text: Sketch
-#            link: /categories/生活点滴
-#            class: in
-#          - text: 设计报告
-#            link: /categories/资源分享
-#            class: in
-#          - text: Photoshop
-#            link: /categories/学习笔记
-#            class: in
 #      - group_title: 开发
 #        footer_links:
 #          - text: Hexo魔改
@@ -523,17 +475,6 @@
 #          - text: 友链文章
 #            link: /categories/资源分享
 #            class: in
-#      - group_title: 服务
-#        footer_links:
-#          - text: 51la统计
-#            link: /categories/博客相关
-#            class: in
-#          - text: BlogFinder
-#            link: /categories/生活点滴
-#            class: in
-#          - text: 十年之约
-#            link: /categories/资源分享
-#            class: in
 #      - group_title: 协议
 #        footer_links:
 #          - text: 隐私协议
@@ -545,7 +486,15 @@
 #          - text: 版权协议
 #            link: /categories/资源分享
 #            class: in
-#  icp: 京ICP备1905135号
+#  banner_link_group:
+#    - text: 隐私
+#      link: /agreement/privacy
+#    - text: 版权
+#      link: /agreement/cc
+#    - text: Cookies
+#      link: /agreement/cookies
+#  icp: XXX号
+#  copyright: ©2016 - 2023 By XXX
 #
 #
 ## hometop
@@ -627,10 +576,10 @@
 ## --------------------------------------
 #
 #site_verification:
-#  # - name: google-site-verification
-#  #   content: xxxxxx
-#  # - name: baidu-site-verification
-#  #   content: xxxxxxx
+## - name: google-site-verification
+##   content: xxxxxx
+## - name: baidu-site-verification
+##   content: xxxxxxx
 #
 ## Beautify/Effect (美化/效果)
 ## --------------------------------------
@@ -641,9 +590,9 @@
 #theme_color:
 #  enable: true
 #  main: "#425AEF"
-##   paginator: "#00c4b6"
+#  #   paginator: "#00c4b6"
 #  button_hover: "#425AEF"
-##   text_selection: "#00c4b6"
+#  #   text_selection: "#00c4b6"
 #  link_color: "#425AEF"
 ##   meta_color: "#858585"
 ##   hr_color: "#A4D8FA"
@@ -876,8 +825,8 @@
 #pjax:
 #  enable: true
 #  exclude:
-#    # - xxxx
-#    # - xxxx
+#  # - xxxx
+#  # - xxxx
 #
 ## Inject the css and script (aplayer/meting)
 #aplayerInject:
@@ -935,7 +884,7 @@
 ## 插入代码到头部 </head> 之前 和 底部 </body> 之前
 #inject:
 #  head:
-#    # - <link rel="stylesheet" href="/xxx.css">
+#  # - <link rel="stylesheet" href="/xxx.css">
 #  bottom:
 #    - <script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
 #    - <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -971,7 +920,7 @@
 #  # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
 #  # option: moezz/local/jsdelivr/unpkg/cdnjs/custom
 #  # when set it to local, you need to install hexo-butterfly-extjs
-#  third_party_provider: jsdelivr
+#  third_party_provider: moezzcdn
 #
 #  # Add version number to CDN, true or false
 #  version: false
