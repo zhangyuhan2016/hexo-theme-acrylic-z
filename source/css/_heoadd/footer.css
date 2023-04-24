@@ -111,13 +111,15 @@ img.footer_mini_logo:hover {
 #heo-footer .footer-item {
   font-size: 0.8rem;
   line-height: 0.8rem;
-  margin: 0.38rem 0;
+  margin: 0.5rem 0;
   color: var(--heo-fontcolor);
   margin-right: auto;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 120px;
+  cursor: pointer;
+  padding: 2px 0;
 }
 
 #heo-footer .footer-item:hover {
@@ -191,12 +193,33 @@ img.footer_mini_logo:hover {
   display: flex;
   flex-wrap: wrap;
   min-height: 32px;
+  align-items: center;
+}
+
+
+#footer-banner .footer-banner-group {
+  text-align: right;
+  padding-right: 9px;
+}
+
+#footer-banner .footer-banner-group .footer-small-link {
+  color: var(--heo-fontcolor);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  line-height: 2rem;
+}
+
+#footer-banner .footer-banner-group .footer-small-link + .footer-small-link {
+  margin-left: 1rem;
+}
+
+#footer-banner .footer-banner-link + .footer-banner-link{
+  margin-left: 1rem;
 }
 
 #footer-banner .footer-banner-link {
-  margin-right: 1rem;
   color: var(--heo-fontcolor);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
   white-space: nowrap;
 }
@@ -216,6 +239,10 @@ img.footer_mini_logo:hover {
 
 #footer-banner>div>div.footer-banner-left>span {
   margin-right: 1rem;
+}
+
+#footer-banner .footer-banner-right {
+  text-align: right;
 }
 
 #footer-banner .footer-banner-right a:hover {
