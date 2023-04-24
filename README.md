@@ -26,9 +26,19 @@ git clone -b main https://github.com/zhangyuhan2016/hexo-theme-acrylic-z.git the
 git clone -b dev https://github.com/zhangyuhan2016/hexo-theme-acrylic-z.git themes/acrylic-z
 ```
 
+### 更好的配置
+- macos/linux
+  在博客根目录运行
+```bash
+cp -rf ./themes/acrylic-z/_config.yml ./_config.acrylic-z.yml
+```
+- windows
+  复制```/themes/acrylic-z/_config.yml```此文件到hexo根目录，并重命名为```_config.acrylic-z.yml```
+
+
 </details>
 
-### npm 安裝
+### 安裝
 
 ```
 # npm
@@ -37,6 +47,12 @@ npm i hexo-theme-acrylic-z
 # yarn
 yarn add hexo-theme-acrylic-z
 ```
+#### 使用主题配置
+
+因为当前主题配置与**Hexo深度合并策略**并不完美适应，默认主题配置全部处于注释状态。
+
+需要在项目根目录新增 **_config.acrylic-z.yml** 并 Copy [_config.yml](./_config.yml) 内容。
+
 
 ## ⚙ 应用主题
 
@@ -74,16 +90,6 @@ theme: acrylic-z
 ### 域名提供
 [@张洪Heo](https://github.com/zhheo)
 [@Acozycotage](https://github.com/Acozycotage)
-
-
-## 更好的配置
-- macos/linux
-在博客根目录运行
-```bash
-cp -rf ./themes/acrylic-z/_config.yml ./_config.acrylic-z.yml
-```
-- windows
-复制```/themes/acrylic-z/_config.yml```此文件到hexo根目录，并重命名为```_config.acrylic-z.yml```
 
 ## 版权
 
