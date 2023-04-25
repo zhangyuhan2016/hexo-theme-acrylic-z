@@ -16,9 +16,7 @@
 #rightMenu .rightMenu-group {
   padding: 7px 6px;
 }
-#rightMenu .rightMenu-group:not(:nth-last-child(1)) {
-  border-bottom: 1px solid var(--font-color);
-}
+
 #rightMenu .rightMenu-group.rightMenu-small {
   display: flex;
   justify-content: space-between;
@@ -64,7 +62,7 @@
   display: none;
   position: fixed;
   padding: 0 0.25rem;
-  width: 9rem;
+  min-width: 9rem;
   height: fit-content;
   top: 10%;
   left: 10%;
@@ -78,6 +76,7 @@
   border: var(--style-border);
   user-select: none;
   box-shadow: var(--heo-shadow-black);
+  transition: border 0.3s;
 }
 
 #rightMenu:hover {
@@ -144,6 +143,9 @@
   width: 30px;
   height: 30px;
   line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #rightmenu-mask {
