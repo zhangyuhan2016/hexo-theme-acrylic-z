@@ -10,7 +10,8 @@
         else
           a.deal_link(href=`${i.link}`, title=`${i.desrc}`)
             i(class=`${i.icon}`)
-  img.footer_mini_logo.entered.loading(title='返回顶部' onclick='btf.scrollToDest(0, 500)' src=`${theme.footer.footer_logo.url}` data-ll-status='loading')
+  if theme.footer.footer_logo.enable
+    img.footer_mini_logo.entered.loading(title='返回顶部' onclick='btf.scrollToDest(0, 500)' src=`${theme.footer.footer_logo.url}` data-ll-status='loading')
   if theme.footer.footer_icons.enable
       each i in theme.footer.footer_icons.right
         if i.class == "in"
@@ -40,15 +41,13 @@
       #footer-banner-tips
         .copyright=theme.footer.copyright
     .footer-banner-right
+      each group in theme.footer.banner_link_group
+        .footer-banner-group
+          each item in group.group
+            a.footer-small-link(href=`${item.link}` target=`${item.target || '_self'}` rel=`${item.rel || 'bookmark'}`)=item.text
 
-      .footer-banner-group
-        a.footer-small-link(href='/rss/' data-pjax-state='') 订阅
-        a.footer-small-link(target='_blank' href='https://github.com/zhangyuhan2016/hexo-theme-acrylic-z' rel='noopener external nofollow noreferrer noopener') 主题
-        each item in theme.footer.banner_link_group
-          a.footer-small-link(href=`${item.link}` data-pjax-state='')=item.text
-
-      a.footer-banner-link(target='_blank' href='https://beian.miit.gov.cn/#/Integrated/index' rel='noopener external nofollow noreferrer noopener')=theme.footer.icp
-      a.footer-banner-link.cc(href='/agreement/cc/' title='cc协议' data-pjax-state='')
+      a.footer-banner-link(target='_blank' href='https://beian.miit.gov.cn/#/Integrated/index' rel='external noopener nofollow noreferrer')=theme.footer.icp
+      a.footer-banner-link.cc(href='/agreement/cc/' title='cc协议' data-pjax-state='' rel='copyright')
         i.fa-regular.fa-copyright
         i.fa-brands.fa-creative-commons-by
         i.fa-brands.fa-creative-commons-nc
