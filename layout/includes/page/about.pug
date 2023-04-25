@@ -1,27 +1,23 @@
 #about-page
   .author-info
     .author-tag-left
-      span.author-tag 
-      span.author-tag 
-      span.author-tag 
-      span.author-tag 
+      each i in theme.about.info.left
+        span.author-tag=i
     .author-img
       img.entered.loading(src=`${theme.avatar.img}` data-ll-status='loading')
     .author-tag-right
-      span.author-tag 
-      span.author-tag 
-      span.author-tag 
-      span.author-tag
+      each i in theme.about.info.right
+        span.author-tag=i
   p.p.center.logo.large 关于本站
   .author-content
     .author-content-item.myInfoAndSayHello
       .title1 你好，很高兴认识你👋
       .title2
-        | 我叫 
+        | 我叫
         span.inline-word= config.author
       .title1
-        | 是一名 
-        span.inline-word=theme.about.job 
+        | 是一名
+        span.inline-word=theme.about.job
     .aboutsiteTips.author-content-item
       .author-content-item-tips 追求
       h2
@@ -273,10 +269,7 @@
                 .reward-list-item
                   .reward-list-item-name=item.name
                   .reward-list-bottom-group
-                    if item.amount >= 50
-                      .reward-list-item-money(style='background:var(--anzhiyu-yellow)')=`¥${item.amount}`
-                    else
-                      .reward-list-item-money=`¥${item.amount + (item.suffix ? item.suffix : "")}`
+                    .reward-list-item-money(style=`${item.amount >= 10 ? 'background:var(--anzhiyu-yellow)' : ''}`)=`¥${item.amount + (item.suffix ? item.suffix : "")}`
                     .datatime.reward-list-item-time(datatime=item.datatime)=new Date(item.datatime).toISOString().slice(0, -14)
             .reward-list-updateDate
               | 最新更新时间：
