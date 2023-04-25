@@ -1,65 +1,69 @@
 #rightMenu.js-pjax
     .rightMenu-group.rightMenu-small
-        a.rightMenu-item(href="javascript:window.history.back();")
+        .rightMenu-item#menu-backward
             i.fa.fa-arrow-left
-        a.rightMenu-item(href="javascript:window.history.forward();")
+        .rightMenu-item#menu-forward
             i.fa.fa-arrow-right
-        a.rightMenu-item(href="javascript:window.location.reload();")
+        .rightMenu-item#menu-refresh
             i.fa.fa-refresh
-        a.rightMenu-item(href="javascript:btf.scrollToDest(0, 500);")
+        .rightMenu-item#menu-top
             i.fa.fa-arrow-up
-    .rightMenu-group.rightMenu-line.hide#menu-text
-        a.rightMenu-item(href="javascript:rmf.copySelect();")
+    .rightMenu-group.rightMenu-line.rightMenuPlugin
+        .rightMenu-item#menu-copytext
             i.fa.fa-copy
-            span='复制'
-        a.rightMenu-item(href="javascript:window.open(\"https://www.baidu.com/s?wd=\"+window.getSelection().toString());window.location.reload();")
-            i.fa.fa-search
-            span='百度搜索'
-    .rightMenu-group.rightMenu-line.hide#menu-too
-        a.rightMenu-item(href="javascript:window.open(window.getSelection().toString());window.location.reload();")
+            span 复制选中文本
+        .rightMenu-item#menu-pastetext
+            i.fa.fa-paste
+            span 粘贴文本
+        .rightMenu-item#menu-newwindow
+            i.fa.fa-arrow-up-right-from-square
+            span 新窗口打开
+        .rightMenu-item#menu-copylink
             i.fa.fa-link
-            span='转到链接'
-    .rightMenu-group.rightMenu-line.hide#menu-paste
-        a.rightMenu-item(href='javascript:rmf.paste()')
-            i.fa.fa-copy
-            span='粘贴'
-    .rightMenu-group.rightMenu-line.hide#menu-post
-        a.rightMenu-item(href="#post-comment")
-            i.fas.fa-comment
-            span='空降评论'
-        a.rightMenu-item(href="javascript:rmf.copyWordsLink()")
-            i.fa.fa-link
-            span='复制本文地址'
-    .rightMenu-group.rightMenu-line.hide#menu-to
-        a.rightMenu-item(href="javascript:rmf.openWithNewTab()")
-            i.fa.fa-window-restore
-            span='新窗口打开'
-        a.rightMenu-item#menu-too(href="javascript:rmf.open()")
-            i.fa.fa-link
-            span='转到链接'
-        a.rightMenu-item(href="javascript:rmf.copyLink()")
-            i.fa.fa-copy
-            span='复制链接'
-    .rightMenu-group.rightMenu-line.hide#menu-img
-        a.rightMenu-item(href="javascript:rmf.saveAs()")
+            span 复制链接地址
+        .rightMenu-item#menu-copyimg
+            i.fa.fa-image
+            span 复制此图片
+        .rightMenu-item#menu-downloadimg
             i.fa.fa-download
-            span='保存图片'
-        a.rightMenu-item(href="javascript:rmf.openWithNewTab()")
-            i.fa.fa-window-restore
-            span='在新窗口打开'
-        a.rightMenu-item(href="javascript:rmf.copyLink()")
-            i.fa.fa-copy
-            span='复制图片链接'
+            span 下载此图片
+        .rightMenu-item#menu-search
+            i.fa.fa-magnifying-glass-location
+            span 站内搜索
+        .rightMenu-item#menu-searchBaidu
+            i.fa.fa-search
+            span 百度搜索
+        .rightMenu-item#menu-music-toggle
+            i.fa.fa-play
+            span 播放音乐
+        .rightMenu-item#menu-music-back
+            i.fa.fa-backward
+            span 切换到上一首
+        .rightMenu-item#menu-music-forward
+            i.fa.fa-forward
+            span 切换到下一首
+        .rightMenu-item#menu-music-playlist
+            i.fa.fa-list
+            span 查看所有歌曲
+        .rightMenu-item#menu-music-copyMusicName
+            i.fa.fa-music
+            span 复制歌名
+    .rightMenu-group.rightMenu-line.rightMenuOther
+        a.rightMenu-item.menu-Link#menu-randomPost
+            i.fa.fa-van-shuttle
+            span 随便逛逛
     .rightMenu-group.rightMenu-line
-        a.rightMenu-item(href="javascript:toRandomPost()")
-            i.fa.fa-paper-plane
-            span='随便逛逛'
+        a.rightMenu-item.menu-link(href="/agreement/privacy/", data-pjax-state="")
+            i.fa.fa-mask
+            span 隐私协议
+        a.rightMenu-item.menu-link(href="/agreement/cc/", data-pjax-state="")
+            i.fa.fa-copyright
+            span 版权协议
+    .rightMenu-group.rightMenu-line.rightMenuOther
+        .rightMenu-item#menu-copy
+            i.fa.fa-link
+            span 复制地址
         .rightMenu-item#menu-darkmode
-            i.fa-solid.fa-moon
-            span='切换模式'
-        a.rightMenu-item(href="/about/")
-            i.fa.fa-info-circle
-            span='关于博客'
-        a.rightMenu-item(href="javascript:rmf.fullScreen();")
-            i.fas.fa-expand
-            span='切换全屏'
+            i.fa.fa-circle-half-stroke
+            span.menu-darkmode-text 深色模式
+
