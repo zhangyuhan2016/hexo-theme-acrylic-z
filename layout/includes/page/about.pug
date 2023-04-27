@@ -173,20 +173,21 @@
           |
           span.selfInfo-content(style='color:#b04fe6')=theme.about.work
 
-  .author-content
-    .author-content-item.personalities
-      .author-content-item-tips 性格
-      span.author-content-item-title=theme.about.character
-      .title2(style='color:#ac899c')=theme.about.character2
-      .post-tips
-        | 在
-        a(href='https://www.16personalities.com/', target='_blank', rel='noopener nofollow') 16personalities
-        |  了解更多关于
-        a(target='_blank', rel='noopener external nofollow', href='https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC')=theme.about.character
-      .image
-        img.no-lightbox(src=theme.about.personalities)
-    .author-content-item.myphoto
-      img.author-content-img.no-lightbox(alt='自拍', src=theme.about.selfie)
+  if theme.about.personalities
+    .author-content
+      .author-content-item.personalities
+        .author-content-item-tips 性格
+        span.author-content-item-title=theme.about.character
+        .title2(style='color:#ac899c')=theme.about.character2
+        .post-tips
+          | 在
+          a(href='https://www.16personalities.com/', target='_blank', rel='noopener nofollow') 16personalities
+          |  了解更多关于
+          a(target='_blank', rel='noopener external nofollow', href='https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC')=theme.about.character
+        .image
+          img.no-lightbox(src=theme.about.personalities)
+      .author-content-item.myphoto
+        img.author-content-img.no-lightbox(alt='自拍', src=theme.about.selfie)
 
   .author-content
     .author-content-item.maxim
@@ -207,26 +208,46 @@
       .card-background-icon
         i.fas.fa-dice-d20
 
+
   .author-content
-    .author-content-item.game-yuanshen
-      .card-content
-        .author-content-item-tips 爱好游戏
-        span.author-content-item-title 原神
-        .content-bottom
-          .icon-group
-            .loading-bar(role='presentation', aria-hidden='true')
-              img.no-lightbox(src='https://yuanshen.site/imgs/loading-bar.png', alt='Loading...', longdesc='https://ys.mihoyo.com/main/')
-          .tips.game-yuanshen-uid=theme.about.uid
-    .author-content-item.comic-content
-      .card-content
-        .author-content-item-tips 爱好番剧
-        span.author-content-item-title=theme.about.fanjuname
-        .content-bottom
-          .banner-button-group
-            a.banner-button(onclick=theme.about.fanjulink)
-              i.fas.fa-circle-arrow-up-right
-              |
-              span.banner-button-text 立即追番
+    if theme.about.uid
+      .author-content-item.game-card
+        .card-content
+          .author-content-item-tips 爱好游戏
+          span.author-content-item-title 原神
+          .content-bottom
+            .icon-group
+              .loading-bar(role='presentation', aria-hidden='true')
+                img.no-lightbox(src='https://yuanshen.site/imgs/loading-bar.png', alt='Loading...', longdesc='https://ys.mihoyo.com/main/')
+            .tips.game-card-uid=theme.about.uid
+    if theme.about.fanjuname
+      .author-content-item.comic-content
+        .card-content
+          .author-content-item-tips 爱好番剧
+          span.author-content-item-title=theme.about.fanjuname
+          .content-bottom
+            .banner-button-group
+              a.banner-button(onclick=theme.about.fanjulink)
+                i.fas.fa-circle-arrow-up-right
+                |
+                span.banner-button-text 立即追番
+
+    if theme.about.game_card.name
+      .author-content-item.game-card(style=`background-image: url(${theme.about.game_card.bgSrc});`)
+        .card-content
+          .author-content-item-tips=theme.about.game_card.tip
+          span.author-content-item-title=theme.about.game_card.name
+          .content-bottom
+            .tips.game-card-uid=theme.about.game_card.uid
+
+    if theme.about.video_card.name
+      .author-content-item.comic-content(style=`background-image: url(${theme.about.video_card.bgSrc});`)
+        .card-content
+          .author-content-item-tips=theme.about.video_card.tip
+          span.author-content-item-title=theme.about.video_card.name
+          .content-bottom
+            .banner-button-group
+              .tips.game-card-uid=theme.about.video_card.uid
 
   .author-content
     .author-content-item.like-technology
@@ -371,18 +392,20 @@ script.
       });
 
       var helloAboutEl = document.querySelector('.hello-about')
-      helloAboutEl.addEventListener("mousemove", evt => {
-        const mouseX = evt.offsetX;
-        const mouseY = evt.offsetY;
-        gsap.set(".cursor", {
-          x: mouseX,
-          y: mouseY,
-        })
+      if (helloAboutEl) {
+       helloAboutEl.addEventListener("mousemove", evt => {
+         const mouseX = evt.offsetX;
+         const mouseY = evt.offsetY;
+         gsap.set(".cursor", {
+           x: mouseX,
+           y: mouseY,
+         })
 
-        gsap.to(".shape", {
-          x: mouseX,
-          y: mouseY,
-          stagger: -0.1
-        })
-      })
+         gsap.to(".shape", {
+           x: mouseX,
+           y: mouseY,
+           stagger: -0.1
+         })
+       })
+      }
   })()

@@ -222,7 +222,9 @@ document.addEventListener('DOMContentLoaded', function () {
    * Lightbox
    */
   const runLightbox = () => {
-    btf.loadLightbox(document.querySelectorAll('#article-container img:not(.no-lightbox)'))
+    if (typeof btf.loadLightbox === 'function') {
+      btf.loadLightbox(document.querySelectorAll('#article-container img:not(.no-lightbox)'))
+    }
   }
 
   /**
@@ -735,7 +737,7 @@ document.addEventListener('DOMContentLoaded', function () {
       btf.isHidden(document.getElementById('toggle-menu')) && mobileSidebarOpen && sidebarFn.close()
     })
 
-    document.getElementById('menu-mask').addEventListener('click', e => { sidebarFn.close() })
+    document.getElementById('menu-mask')?.addEventListener('click', e => { sidebarFn.close() })
 
     clickFnOfSubMenu()
     GLOBAL_CONFIG.islazyload && lazyloadImg()

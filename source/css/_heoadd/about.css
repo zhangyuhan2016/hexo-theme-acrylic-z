@@ -335,7 +335,7 @@
 }
 
 .author-content-item.map {
-  background: url(https://bj.bcebos.com/baidu-rmb-video-cover-1/0f0d22846f239c03060f83f5f3cbd615.png) no-repeat center;
+  background: url(/images/about/map-light.png) no-repeat center;
   min-height: 160px;
   max-height: 400px;
   position: relative;
@@ -346,7 +346,7 @@
   transition: 1s ease-in-out;
 }
 [data-theme="dark"] .author-content-item.map {
-  background: url(https://bj.bcebos.com/baidu-rmb-video-cover-1/0f0d22846f239c03060f83f5f3cbd615.png) no-repeat center;
+  background: url(/images/about/map-dark.png) no-repeat center;
   background-size: 100%;
 }
 
@@ -645,8 +645,12 @@
   transform: rotate(30deg);
   transition: 2s ease-in-out;
 }
-.author-content-item.game-yuanshen {
+
+.author-content-item.game-card.default-bg {
   background: url(https://img02.anzhiy.cn/adminuploads/1/2022/12/19/63a079ca63c8a.webp) no-repeat top;
+}
+
+.author-content-item.game-card {
   background-size: cover;
   min-height: 300px;
   overflow: hidden;
@@ -673,7 +677,7 @@
 .icon-pos-mid {
   background: url(https://img02.anzhiy.cn/adminuploads/1/2022/09/25/632fb9cecfc8c.png);
 }
-.author-content-item.game-yuanshen::after {
+.author-content-item.game-card::after {
   box-shadow: 0 -69px 203px 11px #575d8b inset;
   position: absolute;
   content: "";
@@ -683,9 +687,12 @@
   left: 0;
 }
 
+.author-content-item.comic-content.default-bg {
+  background: url(https://bj.bcebos.com/baidu-rmb-video-cover-1/b6a43a81c3b3a6b9ec2716e94e9bd2fe.png) no-repeat top;
+}
+
 .author-content-item.comic-content {
   width: 39%;
-  background: url(https://bj.bcebos.com/baidu-rmb-video-cover-1/b6a43a81c3b3a6b9ec2716e94e9bd2fe.png) no-repeat top;
   background-size: cover;
   min-height: 300px;
   overflow: hidden;
@@ -742,10 +749,10 @@
   .author-content-item .card-content .banner-button-group .banner-button:hover {
     background: none !important;
   }
-  .author-content-item.game-yuanshen .content-bottom {
+  .author-content-item.game-card .content-bottom {
     padding-bottom: 10px;
   }
-  .author-content-item.game-yuanshen .game-yuanshen-uid {
+  .author-content-item.game-card .game-card-uid {
     display: none;
   }
   .author-content {
