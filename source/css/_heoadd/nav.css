@@ -598,6 +598,7 @@ padding: 0 12px;
       justify-content: center;
       animation-timing-function: ease-out;
       -webkit-animation-timing-function: ease-out;
+      transition: top 0.3s;
   }
   #page-header.nav-fixed #nav #menus {
       z-index: 100;

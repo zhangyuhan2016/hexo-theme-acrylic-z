@@ -196,10 +196,13 @@ img.footer_mini_logo:hover {
   align-items: center;
 }
 
-
 #footer-banner .footer-banner-group {
   text-align: right;
   padding-right: 9px;
+}
+
+#footer-banner .footer-banner-group + .footer-banner-group {
+  margin-top: -0.5rem;
 }
 
 #footer-banner .footer-banner-group .footer-small-link {
