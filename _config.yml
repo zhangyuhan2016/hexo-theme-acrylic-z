@@ -43,6 +43,7 @@
 #      关于本站: /about/ || fas fa-sailboat
 #  right_button:
 #    travelling: true
+#    search: false
 #    random: true
 #    console: true
 #    totop: true
@@ -565,6 +566,11 @@
 ## https://clarity.microsoft.com/
 #microsoft_clarity:
 #
+
+## 51.la Analytics
+## https://v6.51.la/
+# woyaola_analytics: 统计ID
+# woyaola_perf: 分析ID
 ## Insert ads manually (手動插入廣告)
 ## --------------------------------------
 ## ad:
