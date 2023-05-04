@@ -30,7 +30,7 @@
           |
           span 生活
           |
-          span(data-up) 程序
+          span(data-up) 编码
           |
           span(data-show) 体验
 
@@ -38,7 +38,7 @@
     .author-content-item.skills
       .card-content
         .author-content-item-tips 技能
-        span.author-content-item-title 开启创造力
+        span.author-content-item-title 激活创造力
         .skills-style-group
           .tags-group-all
             .tags-group-wrapper
@@ -133,12 +133,15 @@
     .author-content-item.careers
       .card-content
         .author-content-item-tips 生涯
-        span.author-content-item-title 无限进步
+        span.author-content-item-title 终身学习
         .careers-group
           .careers-item
             .circle(style='background:#357ef5')
-            .name EDU,软件工程专业
-        img.author-content-img.no-lightbox(alt='生涯', src='https://p.zhheo.com/20236d5152f4058d0b8b29185c7b71bbd74a071902.png!cover')
+            .name 软件工程 / 物联网
+          .careers-item
+            .circle(style='background:#f00')
+            .name 前端开发
+        //img.author-content-img.no-lightbox(alt='生涯', src=theme.about.progressSrc)
 
   .author-content
     .about-statistic.author-content-item
@@ -256,19 +259,19 @@
         span.author-content-item-title=theme.about.liketechnology
         .content-bottom
           .tips=theme.about.liketechnologyand
-    .author-content-item.like-music
-      .card-content
-        .author-content-item-tips 音乐偏好
-        span.author-content-item-title 金属、说唱、
-        |
-        span.author-content-item-title 华语流行
-        .content-bottom
-          .tips= config.author
-        .banner-button-group
-          a.banner-button(onclick='pjax.loadUrl("/music/")', data-pjax-state)
-            i.fas.fa-circle-arrow-up-right
-            |
-            span.banner-button-text 更多推荐
+    //.author-content-item.like-music
+    //  .card-content
+    //    .author-content-item-tips 音乐偏好
+    //    span.author-content-item-title 金属、说唱、
+    //    |
+    //    span.author-content-item-title 华语流行
+    //    .content-bottom
+    //      .tips= config.author
+    //    .banner-button-group
+    //      a.banner-button(onclick='pjax.loadUrl("/music/")', data-pjax-state)
+    //        i.fas.fa-circle-arrow-up-right
+    //        |
+    //        span.banner-button-text 更多推荐
 
   .author-content
     .create-site-post.author-content-item.single
