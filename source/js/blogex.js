@@ -158,7 +158,7 @@ function getContrastYIQ(hexcolor) {
 //导航栏文章
 function navTitle() {
   var titlevalue = document.title;
-  var simptitle = titlevalue.replace(' | 张洪Heo', '')
+  var simptitle = titlevalue.replace(' | Hi-Zhang', '')
   document.getElementById("page-name-text").innerHTML = simptitle;
 }
 
@@ -554,23 +554,23 @@ document.addEventListener('pjax:send', function () {
 
 document.addEventListener('pjax:complete', function () {
   coverColor()
-  addRightMenuClickEvent()
+  // addRightMenuClickEvent()
   navTitle()
   percent()
   heo.topPostScroll()
-  heo.topCategoriesBarScroll()
+  // heo.topCategoriesBarScroll()
   heo.sayhi()
   heo.addTag()
   heo.stopImgRightDrag()
-  heo.addFriendLinksInFooter()
+  // heo.addFriendLinksInFooter()
   heo.qrcodeCreate()
   heo.hidecookie()
   heo.onlyHome()
   heo.addNavBackgroundInit()
   heo.initIndexEssay()
-  heo.changeTimeInEssay()
+  // heo.changeTimeInEssay()
   heo.reflashEssayWaterFall()
-  heo.addMediumInEssay()
+  // heo.addMediumInEssay()
   heo.darkModeStatus()
   heo.categoriesBarActive()
   heo.initThemeColor()

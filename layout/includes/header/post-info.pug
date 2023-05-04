@@ -2,6 +2,9 @@
 #post-info
   #post-meta
     .meta-firstline
+      span.post-meta-categories(style='margin-right: 0;')
+        a(href='/agreement/cc/').post-meta-categories=theme.post_meta.post.original === false ? '转载' : '原创'
+
       if (theme.post_meta.post.categories && page.categories.data.length > 0)
         span.post-meta-categories
           each item, index in page.categories.data
@@ -62,7 +65,7 @@
             i.far.fa-clock.fa-fw.post-meta-icon
             span.post-meta-label= _p('post.min2read') + ':'
             span= min2read(page.content, {cn: 350, en: 160}) + _p('post.min2read_unit')
-    
+
       //- for pv and count
       mixin pvBlock(parent_id,parent_class,parent_title)
         span.post-meta-separator |
@@ -109,7 +112,7 @@
             span.post-meta-label= _p('post.comments') + ':'
             if block
               block
-        
+
         case whichCount
           when 'Disqus'
             +countBlock

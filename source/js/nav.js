@@ -1,6 +1,6 @@
 function navTitle() {
     let e = document.title;
-    document.getElementById("page-name-text").innerHTML = e.replace(" | JayHrn", "")
+    document.getElementById("page-name-text").innerHTML = e.replace(" | Hi-Zhang", "")
 }
 
 navTitle() // 打开网站先执行一次

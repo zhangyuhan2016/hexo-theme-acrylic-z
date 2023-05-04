@@ -65,7 +65,7 @@ var heo = {
       }
       scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
       // console.log("滚动高度"+ scrollTop)
-    
+
       if (scrollTop != 0) {
         document.getElementById("page-header").classList.add("nav-fixed");
         document.getElementById("page-header").classList.add("nav-visible");
@@ -135,7 +135,7 @@ var heo = {
     .then(res => res.json())
     .then(json =>{
       var randomFriendLinks = getArrayItems(json,3);
-  
+
       var htmlText = '';
       for (let i = 0; i < randomFriendLinks.length; ++i) {
         var item = randomFriendLinks[i]
@@ -189,17 +189,17 @@ var heo = {
 
   // 二维码
   qrcodeCreate: function() {
-    if (document.getElementById('qrcode')){
-      document.getElementById("qrcode").innerHTML = "";
-      var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: window.location.href,
-        width: 250,
-        height: 250,
-        colorDark : "#000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
-      });
-    }
+    // if (document.getElementById('qrcode')){
+    //   document.getElementById("qrcode").innerHTML = "";
+    //   var qrcode = new QRCode(document.getElementById("qrcode"), {
+    //     text: window.location.href,
+    //     width: 250,
+    //     height: 250,
+    //     colorDark : "#000",
+    //     colorLight : "#ffffff",
+    //     correctLevel : QRCode.CorrectLevel.H
+    //   });
+    // }
   },
 
   // 刷新即刻短文瀑布流
@@ -207,7 +207,7 @@ var heo = {
     if (document.querySelector('#waterfall')) {
       setTimeout(function(){
           waterfall('#waterfall');
-          document.getElementById("waterfall").classList.add('show'); 
+          document.getElementById("waterfall").classList.add('show');
       },500);
     }
   },
@@ -305,7 +305,7 @@ var heo = {
   //隐藏cookie窗口
   hidecookie: function() {
     heo_cookiesTime = setTimeout(()=>{
-      document.getElementById("cookies-window").classList.add('cw-hide');
+      document.getElementById("cookies-window")?.classList.add('cw-hide');
       setTimeout(()=>{
         $('#cookies-window').hide()
       },1000)
@@ -452,7 +452,7 @@ var heo = {
       const startingY = window.pageYOffset;
       const diff = targetY - startingY;
       let startTime = null;
-  
+
       function step(currentTime) {
         if (!startTime) {
           startTime = currentTime;
@@ -465,11 +465,11 @@ var heo = {
           window.requestAnimationFrame(step);
         }
       }
-  
+
       function easeInOutQuad(t) {
         return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
       }
-  
+
       window.requestAnimationFrame(step);
     }
   },
@@ -514,7 +514,7 @@ var heo = {
       document.querySelector("#consoleFPS").classList.add("on");
       localStorage.setItem('showFPS', 'true');
     }
-    
+
   },
   //跳转到指定页面
   toPage: function() {
@@ -534,7 +534,7 @@ var heo = {
   //作者卡片tips更改
   changeSayHelloText: function() {
     // 定义数组存储可选内容
-    const contentArray = ['🤖️ 数码科技爱好者', '🔍 分享与热心帮助', '🏠 智能家居小能手', '🔨 设计开发一条龙', '🤝 专修交互与设计','🏃 脚踏实地行动派',"🧱 团队小组发动机","💢 壮汉人狠话不多"];
+    const contentArray = ['🤖️ 科技爱好者', '🔍 人形检索机器', '🏠 智能家居小能手', '🔨 开发小萌新', '🤝 乐于体验尝试','🏃 脚踏实地行动派',"🧱 专攻各种困难","💪 努力斜杠化"];
     // 获取要更改内容的元素
     const contentElement = document.getElementById('author-info__sayhi');
     // 从数组中随机选择一个新内容
@@ -561,7 +561,7 @@ var heo = {
           left: 0,
           behavior: 'smooth'
         });
-        buttonIcon.innerHTML = '<i class="heofont icon-youxiangshuangjiantou"></i>'; 
+        buttonIcon.innerHTML = '<i class="heofont icon-youxiangshuangjiantou"></i>';
       } else {
         // 滚动条在其他位置，向右滚动一个可视宽度
         element.scrollBy({

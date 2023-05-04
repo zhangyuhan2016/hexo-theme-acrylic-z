@@ -66,6 +66,7 @@ div#author-info__sayhi {
     padding: 2px 8px;
     border-radius: 12px;
     width: fit-content;
+    cursor: pointer;
 }
 
 #aside-content .card-info .author-info__name {

@@ -8,6 +8,13 @@ var custom = {
     sayhi: function() {
         var e = document.getElementById("author-info__sayhi");
         e && (e.innerHTML = custom.getTimeState() + "！我是")
+        e.addEventListener('mouseover', function () {
+            try {
+                heo.changeSayHelloText()
+            } catch (e) {
+                console.warn(e)
+            }
+        })
     },
 }
 custom.sayhi();
