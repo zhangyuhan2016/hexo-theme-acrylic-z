@@ -12570,13 +12570,15 @@ a.bb-link-info:hover {
 
 .author-content-item-group.column.mapAndInfo {
   width: 59%;
+  height: max-content;
 }
 
 /* 关于页面地图 */
 
 .author-content-item.map {
-  background-repeat: no-repeat ;  
-  background-position: center ;
+  background-image: var(--site-about-oneself-map--light);
+  background-repeat: no-repeat;
+  background-position: center;
   min-height: 160px;
   max-height: 400px;
   position: relative;
@@ -12588,15 +12590,16 @@ a.bb-link-info:hover {
 }
 
 [data-theme=dark] .author-content-item.map {
+  background-image: var(--site-about-oneself-map--dark);
   background-size: 100% ;
-  background-repeat: no-repeat ;  
-  background-position: center ;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .author-content-item.map:hover {
   background-size: 120%  !important;
   transition: 4s ease-in-out !important;
-  background-position-x: 0 !important; 
+  background-position-x: 0 !important;
   background-position-y: 36% !important;
 }
 
