@@ -587,7 +587,7 @@ table {
   display: table;
   width: 100%;
   max-width: 100%;
-  table-layout: fixed; 
+  table-layout: fixed;
   border-spacing: 0px;
   border-collapse: collapse;
   empty-cells: show;
@@ -3093,6 +3093,7 @@ li, ul {
   position: relative;
   margin-top: 4rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .post-reward .reward-button {
@@ -3100,7 +3101,6 @@ li, ul {
   padding: 0.2rem 1.2rem;
   background: var(--btn-bg);
   color: var(--btn-color);
-  cursor: pointer;
   transition: all 0.4s ease 0s;
   border-radius: 5px;
 }
@@ -12929,31 +12929,34 @@ a.bb-link-info:hover {
   align-items: flex-start;
   flex-direction: column;
   width: 39%;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Helvetica;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+
 }
 
 .aboutsiteTips h2 {
-  margin-right: auto;
+  margin: 0;
   font-size: 36px;
-  font-family: Helvetica;
-  line-height: 1.06;
-  letter-spacing: -0.02em;
   color: var(--heo-fontcolor);
-  margin-top: 0;
 }
 
+.aboutsiteTips .scroll-prompts-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .aboutsiteTips .mask {
-  height: 36px;
+  height: 40px;
   position: relative;
   overflow: hidden;
-  margin-top: 4px;
 }
 
-.aboutsiteTips .mask span {
+.aboutsiteTips .mask .scroll-prompts-text {
   display: block;
   box-sizing: border-box;
-  position: absolute;
-  top: 36px;
-  padding-bottom: var(--offset);
   background-size: 100% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -12961,29 +12964,20 @@ a.bb-link-info:hover {
   background-repeat: no-repeat;
 }
 
-.aboutsiteTips .mask span[data-show] {
-  transform: translateY(-100%);
-  transition: .5s transform ease-in-out;
-}
 
-.aboutsiteTips .mask span[data-up] {
-  transform: translateY(-200%);
-  transition: .5s transform ease-in-out;
-}
-
-.aboutsiteTips .mask span:nth-child(1) {
+.aboutsiteTips .mask.scroll-prompts--top .scroll-prompts-text[data-swiper-slide-index='0'] {
   background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
 }
 
-.aboutsiteTips .mask span:nth-child(2) {
+.aboutsiteTips .mask.scroll-prompts--top .scroll-prompts-text[data-swiper-slide-index='1'] {
   background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
 }
 
-.aboutsiteTips .mask span:nth-child(3) {
+.aboutsiteTips .mask.scroll-prompts--bottom .scroll-prompts-text[data-swiper-slide-index='0'] {
   background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
 }
 
-.aboutsiteTips .mask span:nth-child(4) {
+.aboutsiteTips .mask.scroll-prompts--bottom .scroll-prompts-text[data-swiper-slide-index='1'] {
   background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
 }
 

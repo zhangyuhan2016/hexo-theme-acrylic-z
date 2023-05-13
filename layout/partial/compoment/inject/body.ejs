@@ -7,7 +7,7 @@
 <% if(theme.lightbox){ %>
     <%- js(cdn.viewimagejs) %>
 <% } %>
-<% if(theme.hometop.bbtime){ %>
+<% if(theme.hometop.bbtime || page.type === 'about'){ %>
     <%- css(cdn.swipercss) %>
     <%- js(cdn.swiperjs) %>
 <% } %>
@@ -24,7 +24,7 @@
     <% } %>
     <% if(theme.thirdparty.busuanzi && (theme.aside.siteinfo.uv || theme.aside.siteinfo.pv)){ %>
         <script async src="<%= cdn.busuanzijs %>"></script>
-    <% } %> 
+    <% } %>
 </div>
 <% if(theme.thirdparty.aplayer.enable){ %>
     <%- css(cdn.aplayercss) %>
@@ -35,7 +35,7 @@
     <%- js('/js/extend/covercolor/web') %>
 <% }else{ %>
     <%- js('/js/extend/covercolor/local') %>
-<% } %>        
+<% } %>
 <% if(theme.footer.randomlink){ %>
     <%- randomLinks() %>
 <% } %>

@@ -2,32 +2,53 @@
 <div class="author-content">
 	<div class="author-content-item myInfoAndSayHello">
 		<div class="title1">你好，很高兴认识你👋</div>
-		<div class="title2">我叫 <span class="inline-word"><%= contentinfo.name %></span></div>
-		<div class="title1">是一名 <%= contentinfo.title %></div>
+		<div class="title2">我是 <span class="inline-word"><%= contentinfo.name %></span></div>
+		<div class="title1">目前是一名 <%= contentinfo.title %></div>
 	</div>
 	<div class="aboutsiteTips author-content-item">
-		<div class="author-content-item-tips">追求</div>
-		<h2>源于<br> 热爱而去<span class="inline-word">创造</span>
-			<div class="mask"><span class="first-tips" data-show=""><%= contentinfo.product %></span><span><%= contentinfo.design %></span><span><%= contentinfo.program %></span><span
-					data-up=""><%= contentinfo.user_experience %></span></div>
-		</h2>
+		<div class="author-content-item-tips">探索</div>
+		<h2>源于</h2>
+		<div class="scroll-prompts-container">
+			<span>热爱而去</span>
+			<div class="mask scroll-prompts--top swiper-container">
+				<div class="swiper-wrapper">
+					<% (contentinfo.prompts.top || []).forEach(tip => { %>
+						<div class="swiper-slide scroll-prompts-text"><%= tip %></div>
+					<% }); %>
+				</div>
+			</div>
+		</div>
+
+		<div class="mask scroll-prompts--bottom swiper-container">
+			<div class="swiper-wrapper">
+				<% (contentinfo.prompts.bottom || []).forEach(tip => { %>
+					<div class="swiper-slide scroll-prompts-text"><%= tip %></div>
+				<% }); %>
+			</div>
+		</div>
 	</div>
 </div>
 <script>
-	var pursuitInterval = null;
-	pursuitInterval = setInterval(function () {
-	  const show = document.querySelector('span[data-show]')
-	  const next = show.nextElementSibling || document.querySelector('.first-tips')
-	  const up = document.querySelector('span[data-up]')
-	  if (up) {
-		up.removeAttribute('data-up')
-	  }
-	  show.removeAttribute('data-show')
-	  show.setAttribute('data-up', '')
-	  next.setAttribute('data-show', '')
-	}, 2000)
-
-	document.addEventListener('pjax:send', function(){
-	  clearInterval(pursuitInterval);
+	window.addEventListener('load', function() {
+		if (Swiper) {
+			new Swiper('.mask.scroll-prompts--top', {
+				direction: 'vertical',
+				loop: true,
+				autoplay: {
+					delay: 2000,
+					pauseOnMouseEnter: false
+				}
+			});
+			setTimeout(function () {
+				new Swiper('.mask.scroll-prompts--bottom', {
+					direction: 'vertical',
+					loop: true,
+					autoplay: {
+						delay: 2000,
+						pauseOnMouseEnter: false
+					}
+				});
+			}, 300)
+		}
 	});
-  </script>
+</script>
