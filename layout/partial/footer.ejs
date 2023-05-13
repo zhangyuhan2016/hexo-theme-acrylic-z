@@ -11,7 +11,7 @@
             <i class="<%= theme.footer.information.right[i].icon %>"></i>
         </a>
     <% } %>
-</div>    
+</div>
 <div id="heo-footer">
     <% for(const x in theme.footer.group){ %>
         <div class="footer-group">
@@ -19,7 +19,7 @@
             <div class="footer-links">
                 <% for(const y in theme.footer.group[x]){ %>
                     <a class="footer-item" href="<%= url_for(theme.footer.group[x][y]) %>" title="<%= y %>" rel="noopener external nofollow noreferrer"><%= y %></a>
-                <% } %>    
+                <% } %>
             </div>
         </div>
     <% } %>
@@ -40,21 +40,22 @@
     <div class="footer-section-links">
         <div class="footer-section-left">
             <div id="footer-section-tips">
-                <div class="copyright">©<%= moment(theme.aside.siteinfo.runtime).year() %> - <%= new Date().getFullYear() %> By 
+                <div class="copyright">©<%= moment(theme.aside.siteinfo.runtime).year() %> - <%= new Date().getFullYear() %> By
                     <a class="footer-section-link" href="/" rel="external nofollow"><%= config.author %></a>
-                    <a class="footer-section-link" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic-Next" rel="external nofollow" target="_blank"> Theme By Acrylic-Next</a>
                 </div>
             </div>
         </div>
         <div class="footer-section-right">
-            <a class="footer-section-link" href="/rss/">订阅</a>
             <% if(theme.site.icp){ %>
                 <a class="footer-section-link" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noopener external nofollow noreferrer noopener">
                     <%= theme.site.icp %>
                 </a>
             <% } %>
-            <a class="footer-section-link cc" target="_blank" href="https://creativecommons.org/licenses/by/4.0/" title="cc协议">
-                <i class="fa-solid fa-closed-captioning"></i>
+            <a class="footer-section-link cc" rel='copyright' href="/agreement/cc/" title="cc协议">
+                <i class="fa-regular fa-copyright"></i>
+                <i class="fa-brands fa-creative-commons-by"></i>
+                <i class="fa-brands fa-creative-commons-nc"></i>
+                <i class="fa-brands fa-creative-commons-nd"></i>
             </a>
         </div>
     </div>
