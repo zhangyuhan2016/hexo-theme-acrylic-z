@@ -1,8 +1,8 @@
 {
   "description": "A beautiful, powerful, and efficient Hexo theme developed by the hexo-theme-Acrylic team, Add some of me own style.",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "author": "zhangyuhan2016",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zhangyuhan2016/hexo-theme-acrylic-z/issues"
   },
