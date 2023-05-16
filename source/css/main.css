@@ -12279,8 +12279,24 @@ a.bb-link-info:hover {
 
 #footer-section .footer-section-left {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   min-height: 32px;
+}
+
+#footer-section .footer-section-links--server a img {
+  object-fit: contain;
+  width: auto;
+  height: 20px;
+}
+#footer-section .footer-section-links--server a + a {
+  margin-left: 0.8rem;
+}
+#footer-section .footer-section-links--server {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 0;
 }
 
 #footer-section .footer-section-link {
