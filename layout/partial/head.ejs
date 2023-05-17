@@ -1,5 +1,6 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-language" content="zh-cn">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <%
     var title = '', subtitle = ''
@@ -11,17 +12,38 @@
     else if(is_page() || is_post())title = page.title
     if(is_home())subtitle = config.subtitle ? ' - ' + config.subtitle : ''
     else subtitle = title ? ' | ' + config.title : config.title
-    var description = page.description || page.excerpt || config.description
+    var formatInfo = getPageMetaData(page)
+    var description = page.description || page.excerpt || formatInfo._summary || config.description
+    var type = is_post() ? 'article' : 'website'
+    var author = page.author || config.author
+    var keywords = page.keywords || formatInfo._keywords
 -%>
 <title><%= title + subtitle %></title>
-<noscript>开启Javascript是必要的</noscript>
+<meta name="keywords" content="<%= keywords %>">
+<meta name="author" content="<%= author %>">
+<meta name="apple-mobile-web-app-title" content="<%= author %>">
+<meta name="copyright" content="<%= author %>">
+<meta name="description" content="<%= description %>">
+<meta property="article:published_time" content="<%= page.date%>">
+<meta property="article:modified_time" content="<%= page.updated%>">
+<meta property="article:author" content="<%= author %>">
+<meta property="article:tag" content="<%= keywords %>">
+<meta property="og:image" content="<%= page.cover %>">
+<meta property="og:type" content="<%= type %>">
+<meta property="og:title" content="<%= title %>">
+<meta property="og:url" content="<%= page.permalink %>">
+<meta property="og:site_name" content="<%= author %>">
+<meta property="og:description" content="<%= description %>">
+<meta property="og:locale" content="zh_CN">
+<meta name="theme-color" content="#1C1C1F">
+<meta name="apple-mobile-web-app-title" content="<%= config.title %>">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" type="image/x-icon" href="<%= url_for(theme.site.siteIcon) %>">
 <link rel="apple-touch-icon" href="<%= url_for(theme.site.siteIcon) %>">
-<meta name="apple-mobile-web-app-title" content="<%= config.title %>">
 <link rel="bookmark" href="<%= url_for(theme.site.siteIcon) %>">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="<%= url_for(theme.site.siteIcon) %>">
-<meta name="description" content="<%= description %>">
-<meta name="theme-color" content="#1C1C1F">
 <link rel="stylesheet" href="/css/var.css">
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/custom.css">
@@ -30,3 +52,5 @@
     <%- i %>
 <% } %>
 <%- export_config() %>
+
+<noscript>开启Javascript是必要的</noscript>
