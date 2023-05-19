@@ -12,7 +12,7 @@
                     </div>
                     <div class="aside-list"></div>
                 </div>
-    
+
             </div>
             <div class="console-card-group-right">
                 <div class="console-card tags" onclick="acrylic.hideConsole()">
@@ -27,17 +27,17 @@
                     </div>
                 </div>
                 <div class="console-card history" onclick="acrylic.hideConsole()">
-                    <%- partial('partial/compoment/aside/asideArchive' , { type: 'month' }) %>
+                    <%- partial('partial/compoment/aside/asideArchive' , { cache: true }) %>
                 </div>
             </div>
         </div>
     <% } %>
-    
+
     <div class="button-group">
         <div class="console-btn-item"> <a class="darkmode_switchbutton" onclick="acrylic.switchDarkMode()" title="显示模式切换"
                 href="javascript:void(0);" rel="external nofollow" data-pjax-state=""><i class="fas fa-moon"
                     style="font-size: 1rem;"></i></a></div>
-        <% if(theme.thirdparty.aplayer.enable){ %>            
+        <% if(theme.thirdparty.aplayer.enable){ %>
             <div class="console-btn-item" id="consoleMusic" onclick="acrylic.musicToggle()" title="音乐开关"><a class="music-switch"><i class="fas fa-music"></i></a></div>
         <% } %>
     </div>

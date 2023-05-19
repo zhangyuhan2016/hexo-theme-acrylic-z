@@ -13417,9 +13417,9 @@ a.bb-link-info:hover {
 }
 
 @media screen and (max-height: 800px) {
-  #console .console-card-group {
-    display: none;
-  }
+  /*#console .console-card-group {*/
+  /*  display: none;*/
+  /*}*/
 
   #consoleMusic {
     display: none;
@@ -13697,15 +13697,18 @@ a.bb-link-info:hover {
   display: none;
 }
 
+#console .console-card.history .card-archive-list .card-archive-list-item + .card-archive-list-item {
+  margin-left: 16px;
+}
 #console .console-card.history .card-archive-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
   height: 164px;
 }
 
 #console .console-card.history .card-archive-list li.card-archive-list-item {
+  cursor: pointer;
   flex: 0 0 24%;
 }
 
