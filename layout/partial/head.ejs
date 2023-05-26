@@ -44,9 +44,6 @@
 <link rel="apple-touch-icon" href="<%= url_for(theme.site.siteIcon) %>">
 <link rel="bookmark" href="<%= url_for(theme.site.siteIcon) %>">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="<%= url_for(theme.site.siteIcon) %>">
-<link rel="stylesheet" href="/css/var.css">
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/custom.css">
 <%- partial('partial/compoment/inject/head', {cache: true}) %>
 <% if (theme.extends.head) for (const i of theme.extends.head){ %>
     <%- i %>

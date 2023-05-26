@@ -1,12 +1,16 @@
 <% const cdn = theme.cdn.head %>
+<%- css(cdn.varcss) %>
+<%- css(cdn.maincss) %>
+<%- css(cdn.customcss) %>
 <% if(theme.loading.pace){ %>
     <script data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}" src="<%= cdn.pacejs %>"></script>
 <% } %>
-<%- css(cdn.fontawesomecss) %>    
+<%- css(cdn.fontawesomecss) %>
 <%- css(cdn.snackbarcss) %>
-<%- js(cdn.qrcodejs) %>
+<script src="<%- cdn.qrcodejs %>" defer></script>
 <% if(theme.comment.enable){ %>
-    <%- js(cdn.twikoojs) %>
+    <script src="<%- cdn.twikoojs %>" defer></script>
+<!--    <%- js(cdn.twikoojs, { defer: true }) %>-->
 <% } %>
 <% if(theme.thirdparty.search.algolia_search.enable){ %>
     <%- js(cdn.instantsearch) %>

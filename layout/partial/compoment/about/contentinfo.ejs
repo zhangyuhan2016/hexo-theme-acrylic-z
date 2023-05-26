@@ -28,8 +28,9 @@
 		</div>
 	</div>
 </div>
-<script defer>
-	window.addEventListener('load', function() {
+<script>
+	function initScrollPrompts () {
+		if (document.readyState !== 'complete') return
 		if (Swiper) {
 			new Swiper('.mask.scroll-prompts--top', {
 				direction: 'vertical',
@@ -50,5 +51,7 @@
 				});
 			}, 300)
 		}
-	});
+	}
+	window.addEventListener('readystatechange', initScrollPrompts);
+	initScrollPrompts()
 </script>
