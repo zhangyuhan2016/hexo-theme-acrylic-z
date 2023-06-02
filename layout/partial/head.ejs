@@ -2,6 +2,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="content-language" content="zh-cn">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="dns-prefetch" href="//img.hi-zhang.com">
+<link rel="dns-prefetch" href="//cdn.hi-zhang.com">
+<link rel="dns-prefetch" href="//cdn.bootcdn.net">
+<link rel="dns-prefetch" href="//cdn.staticfile.org">
+<link rel="dns-prefetch" href="//npm.elemecdn.com">
 <%
     var title = '', subtitle = ''
     if(is_home()){title = config.title}
@@ -24,6 +29,10 @@
 <meta name="apple-mobile-web-app-title" content="<%= author %>">
 <meta name="copyright" content="<%= author %>">
 <meta name="description" content="<%= description %>">
+<meta name="subject" content="<%= keywords %>">
+<!-- Control the behavior of search engine crawling and indexing -->
+<meta name="robots" content="index,follow"><!-- All Search Engines -->
+<meta name="googlebot" content="index,follow"><!-- Google Specific -->
 <meta property="article:published_time" content="<%= page.date%>">
 <meta property="article:modified_time" content="<%= page.updated%>">
 <meta property="article:author" content="<%= author %>">
@@ -40,6 +49,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="/about/index.html">
+<link rel="license" href="/agreement/cc/">
+<!-- Provides information about an author or another person -->
+<link rel="me" href="mailto:support@hi-zhang.com">
+<link rel="archives" href="https://blog.hi-zhang.com/archives/">
+<link rel="index" href="https://blog.hi-zhang.com/tags/">
 <link rel="icon" type="image/x-icon" href="<%= url_for(theme.site.siteIcon) %>">
 <link rel="apple-touch-icon" href="<%= url_for(theme.site.siteIcon) %>">
 <link rel="bookmark" href="<%= url_for(theme.site.siteIcon) %>">
