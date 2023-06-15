@@ -11,7 +11,14 @@
             </div>
         </div>
         <script type="text/javascript">
-            new QRCode(document.getElementById("qrcode"), "<%= page.permalink %>");
+            function initContentQrcode() {
+                if (document.readyState !== 'complete') return
+                if (QRCode) {
+                    new QRCode(document.getElementById("qrcode"), "<%= page.permalink %>");
+                }
+            }
+            window.addEventListener('readystatechange', initContentQrcode);
+            initContentQrcode()
         </script>
     </div>
 </div>

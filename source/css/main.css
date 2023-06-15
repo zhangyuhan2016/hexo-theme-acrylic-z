@@ -580,6 +580,7 @@ hr {
 
 .table-wrap {
   overflow-x: scroll;
+  scrollbar-width: thin;
   margin: 0px 0px 1rem;
 }
 
@@ -803,6 +804,7 @@ blockquote footer cite::before {
 }
 
 #article-container code, #article-container pre {
+  -webkit-text-size-adjust:none;
   font-size: var(--global-font-size);
   font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", sans-serif !important;
 }
@@ -3101,6 +3103,7 @@ li, ul {
   padding: 0.2rem 1.2rem;
   background: var(--btn-bg);
   color: var(--btn-color);
+  cursor: pointer;
   transition: all 0.4s ease 0s;
   border-radius: 5px;
 }
@@ -4458,7 +4461,7 @@ html {
 }
 
 /* 导航栏音乐 */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 800px) {
   #nav-music {
     display: none !important;
   }
@@ -6515,6 +6518,7 @@ a.categoryButton:hover {
 .category-bar-items {
   white-space: nowrap;
   overflow-x: scroll;
+  scrollbar-width: none;
   overflow-y: hidden;
   display: flex;
   border-radius: 8px;
@@ -6947,6 +6951,7 @@ ul, li {
   flex-wrap: nowrap;
   width: 100%;
   overflow-x: scroll;
+  scrollbar-width: none;
 }
 
 .recent-post-top::-webkit-scrollbar {
