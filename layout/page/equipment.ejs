@@ -1,0 +1,29 @@
+<%- partial('partial/compoment/says/banner') %>
+<div id="equipment">
+    <% if (site.data.equipment) { %>
+        <% site.data.equipment.forEach(function(i) { %>
+            <div class="equipment-item">
+                <h2 class="equipment-item-title"><%= i.class_name %></h2>
+                <div class="equipment-item-description"><%= i.description %></div>
+                <div class="equipment-item-content">
+                    <% i.equipment_list.forEach(function(item, index) { %>
+                        <div class="equipment-item-content-item">
+                            <div class="equipment-item-content-item-cover">
+                                <img class="equipment-item-content-item-image" src="<%= item.image %>" alt="<%= item.name %>">
+                            </div>
+                            <div class="equipment-item-content-item-info">
+                                <div class="equipment-item-content-item-name"><%= item.name %></div>
+                                <div class="equipment-item-content-item-specification"><%= item.specification %></div>
+                                <div class="equipment-item-content-item-description"><%= item.description %></div>
+                                <div class="equipment-item-content-item-toolbar">
+                                    <%- partial('partial/compoment/says/saysBottom', {item:item}) %>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        <% }) %>
+    <% } %>
+</div>
+

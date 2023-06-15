@@ -11727,18 +11727,24 @@ figure.gallery-group:hover .gallery-group-name::after {
   margin-bottom: 1rem;
 }
 
+#equipment .bber-info,
 #bber .bber-info {
   display: flex;
   align-items: center;
 }
 
+#equipment .bber-info .fa-rectangles-mixed,
 #bber .bber-info .fa-rectangles-mixed {
   margin-right: 8px;
 }
 
+.bber-info-time + .bber-content-link {
+  margin-left: 0.5rem;
+}
+
+#equipment .bber-content-link,
 #bber .bber-content-link {
   display: flex;
-  margin-left: 0.5rem;
   color: var(--heo-secondtext);
   font-size: 0.7rem;
   align-items: center;
@@ -11748,11 +11754,13 @@ figure.gallery-group:hover .gallery-group-name::after {
   border-radius: 20px;
 }
 
+#equipment .bber-content-link:hover,
 #bber .bber-content-link:hover {
   background-color: var(--heo-main);
   color: var(--heo-white);
 }
 
+#equipment .bber-content-link i,
 #bber .bber-content-link i {
   margin-right: 3px;
 }
@@ -11762,6 +11770,7 @@ figure.gallery-group:hover .gallery-group-name::after {
   padding: 0 4px;
 }
 
+#equipment .bber-bottom,
 #bber .bber-bottom {
   display: flex;
   justify-content: space-between;
@@ -11886,6 +11895,7 @@ figure.gallery-group:hover .gallery-group-name::after {
 
 /* 时间 */
 
+#equipment .bber-info-time,
 #bber>section>ul>li>div .bber-info-time {
   color: var(--heo-fontcolor);
   font-size: 0.7rem;
@@ -11897,6 +11907,7 @@ figure.gallery-group:hover .gallery-group-name::after {
   align-items: center;
 }
 
+#equipment .bber-info-time i,
 #bber>section>ul>li>div .bber-info-time i {
   margin-right: 8px;
 }

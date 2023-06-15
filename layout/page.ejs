@@ -16,6 +16,9 @@
             case 'says': %>
                 <%- partial('page/says') %>
             <% break;
+            case 'equipment': %>
+                <%- partial('page/equipment') %>
+            <% break;
             case 'album': %>
                 <%- partial('album/album') %>
             <% break;
@@ -24,13 +27,13 @@
             <% break;
             default: %>
                 <%- partial('page/page') %>
-            <% break; 
-        } %> 
+            <% break;
+        } %>
         <% if(page.comment){ %>
             <%- partial('partial/compoment/third-party/comments/comment') %>
-        <% } %>    
+        <% } %>
     </div>
     <% if(page.aside){ %>
-        <%- partial('partial/compoment/aside/aside') %> 
-    <% } %>   
-</main>     
+        <%- partial('partial/compoment/aside/aside') %>
+    <% } %>
+</main>
