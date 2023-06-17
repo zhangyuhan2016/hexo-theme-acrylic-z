@@ -4,9 +4,10 @@
     '#body-wrap',
     '#site-config',
     'meta[name="description"]',
+    'link[data-pajx]',
     '#js-pjax'
   ]
-  
+
   const pjax = new Pjax({
     elements: 'a:not([target="_blank"])',
     selectors: pjaxSelectors,

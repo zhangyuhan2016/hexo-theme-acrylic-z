@@ -13204,7 +13204,6 @@ a.bb-link-info:hover {
   left: auto;
   bottom: auto;
   width: fit-content;
-  box-shadow: var(--heo-shadow-border);
 }
 
 .author-content-item.single.reward .post-reward .reward-main .reward-all::before {

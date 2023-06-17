@@ -17,5 +17,5 @@
     <%- js(cdn.algolia) %>
 <% } %>
 <% if (page.type === 'equipment') { %>
-    <%- css('/css/equipment.css') %>
+    <%- css({ href: '/css/equipment.css', 'data-pajx': true }) %>
 <% } %>

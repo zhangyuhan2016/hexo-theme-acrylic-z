@@ -5,7 +5,7 @@
             {
                 el: '#comment',
                 onCommentLoaded: function() {
-                    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #twikoo .tk-content img:not(.tk-owo-emotion)') 
+                    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #twikoo .tk-content img:not(.tk-owo-emotion)')
                 }
             }
         )
@@ -13,7 +13,7 @@
         <% if(theme.post.meta.comment && is_post()){ %>
             var countOptions = Object.assign(
                 <%- JSON.stringify(theme.comment.twikoo || {}) %>,
-                { 
+                {
                     urls: [window.location.pathname],
                     includeReply: false
                 }
@@ -24,6 +24,6 @@
             }catch (e) {
                 document.getElementById('twikoo-count').innerText = '加载错误'
             }
-        <% } %>     
+        <% } %>
     }
 </script>

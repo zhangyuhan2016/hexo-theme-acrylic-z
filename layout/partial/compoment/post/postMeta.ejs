@@ -66,7 +66,13 @@
                         <span id="twikoo_visitors"><i class="fas fa-spinner fa-pulse"></i></span>
                     <% }else{ %>
                         <span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-pulse"></i></span>
-                    <% } %>        
+                    <% } %>
+                </span>
+            <% } %>
+            <% if(theme.post.meta.pv){ %>
+                <span class="post-meta-pv" title="文章热度">
+                    <i class="fab fa-hotjar fa-fw post-meta-icon"></i>
+                    <span id="twikoo_visitors"><i class="fas fa-spinner fa-pulse"></i></span>
                 </span>
             <% } %>
             <% if(theme.post.meta.comment && page.comment){ %>
@@ -76,7 +82,7 @@
                         <span id="twikoo-count"><i class="fas fa-spinner fa-pulse"></i></span>
                     </a>
                 </span>
-            <% } %>    
+            <% } %>
         </div>
     </div>
 </div>
