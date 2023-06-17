@@ -36,8 +36,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 1.3; 
-    color: white; 
+    line-height: 1.3;
+    color: white;
 }
 
 #flip-wrapper .left .title{
@@ -271,7 +271,6 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   margin: var(--album-spacing-xxl) 0 0;
 }
 #album .card-album .album-content-nocover {
@@ -310,7 +309,7 @@
 }
 
 #album .card-album:hover > .card:not(:hover) .card_cover {
-  filter: brightness(0.5) saturate(0.9) contrast(1.2) blur(20px);
+  filter: brightness(.99) saturate(.8) contrast(1.2) blur(12px);
 }
 
 #album .card__content {

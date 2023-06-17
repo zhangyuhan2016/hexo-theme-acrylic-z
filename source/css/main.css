@@ -13716,7 +13716,7 @@ a.bb-link-info:hover {
 
 #console .console-card.history .card-archive-list li.card-archive-list-item {
   cursor: pointer;
-  flex: 0 0 24%;
+  flex: 0 0 12%;
 }
 
 #console .console-card.history .card-archive-list .card-archive-list-link {
