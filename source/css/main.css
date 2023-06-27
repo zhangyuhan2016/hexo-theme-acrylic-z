@@ -7114,6 +7114,63 @@ span.recent-post-top-text {
   margin-left: 8px;
 }
 
+/* 爱发电卡片 */
+.card-sponsor .aside-list-item span {
+  max-width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.2;
+}
+.card-sponsor .aside-list-item h4 {
+  margin: 0;
+}
+
+.card-sponsor .aside-list-item img {
+  overflow: hidden;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 8px;
+}
+.card-sponsor .aside-list-item.highlight {
+  flex-basis: 100%;
+  order: -1;
+}
+.card-sponsor .aside-list-item:not(.highlight) span,
+.card-sponsor .aside-list-item:not(.highlight) img {
+  display: none;
+}
+
+.card-sponsor .aside-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#aside-content .card-sponsor .aside-list>.aside-list-item:not(.highlight) .content {
+  display: inline-block;
+  flex: unset;
+  padding-left: 0;
+}
+#aside-content .card-sponsor .aside-list>.aside-list-item:not(.highlight) {
+  display: inline-block;
+  padding: 0 6px;
+  margin: 0;
+}
+
+.card-sponsor .item-headline .item-icon-info img {
+  max-width: 18px;
+}
+.card-sponsor .item-headline .item-icon-info {
+  display: flex;
+  align-items: center;
+}
+.card-sponsor .item-headline{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 /* 主页卡片阴影 */
 #aside-content .card-widget {

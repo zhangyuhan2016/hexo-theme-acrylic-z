@@ -5,13 +5,16 @@
     case 'flip': %>
         <%- partial('partial/compoment/aside/asideFlipCard', {cache: true}) %>
     <% break;
+    case 'afdian': %>
+        <%- partial('partial/compoment/aside/asideAfdian', {cache: true}) %>
+    <% break;
     case 'newestPost': %>
         <%- partial('partial/compoment/aside/asideNewestPost', {cache: true}) %>
     <% break;
     case 'tag': %>
         <div class="card-widget card-tags">
             <%- partial('partial/compoment/aside/asideTag', {cache: true}) %>
-        </div>    
+        </div>
     <% break;
     case 'archive': %>
         <div class="card-widget card-archives">
@@ -28,5 +31,5 @@
     <% break;
     default: %>
         <%- partial('page/page') %>
-    <% break; 
-} %> 
+    <% break;
+} %>

@@ -1,0 +1,29 @@
+<% if (site.data.afdian) { %>
+<div class="card-widget card-recent-post card-sponsor">
+    <div class="item-headline">
+        <div class="item-icon-info">
+            <% if (site.data.afdian.info.icon) { %>
+                <img src="<%= site.data.afdian.info.icon %>" alt="<%= site.data.afdian.info.title %>">
+            <% } %>
+            <span><%= site.data.afdian.info.title %></span>
+        </div>
+        <a href="<%= site.data.afdian.info.link%>">
+            <%= site.data.afdian.info.tip %>
+        </a>
+    </div>
+    <div class="aside-list">
+        <% let randomIndex = Math.floor(Math.random() * site.data.afdian.sponsors.length); %>
+        <% site.data.afdian.sponsors.forEach((sponsor, index) => { %>
+            <a class="aside-list-item <%= index === randomIndex ? 'highlight' : '' %>" href="<%= url_for(sponsor.link) %>" title="<%= sponsor.name %>">
+                <% if (sponsor.logo) { %>
+                    <img alt="<%= sponsor.title %>" src="<%= sponsor.logo %>">
+                <% } %>
+                <div class="content">
+                    <h4><%= sponsor.name %></h4>
+                    <span><%= sponsor.desc %></span>
+                </div>
+            </a>
+        <% }) %>
+    </div>
+</div>
+<% } %>
