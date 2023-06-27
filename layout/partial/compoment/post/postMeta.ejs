@@ -8,11 +8,11 @@
                 <%= page.cc %>
             </a>
             <% if (page.categories.data.length) { %>
-            <span class="post-meta-categories">
                 <% page.categories.data.forEach(item => { %>
-                    <a class="post-meta-categories" href="<%= url_for(item.path) %>"><%= item.name %></a>
+                    <span class="post-meta-categories">
+                        <a class="post-meta-categories" href="<%= url_for(item.path) %>"><%= item.name %></a>
+                    </span>
                 <% }) %>
-            </span>
             <% } %>
             <div class="tag_share">
                 <div class="post-meta__tag-list">
