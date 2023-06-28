@@ -1,16 +1,17 @@
-const cheerio = require('cheerio');
-
+const cheerio = require('cheerio')
+const logs = []
 hexo.extend.filter.register('after_render:html', function (str) {
 
-    const isDev = hexo.env.env === 'development'
+    const isDev = hexo.env.cmd === 'server'
+
     if (isDev) {
         return str
     }
 
-    const $ = cheerio.load(str, { decodeEntities: false });
+    const $ = cheerio.load(str, { decodeEntities: false })
 
-    const cdnPrefixAssets = hexo.theme.config.cdn?.prefix?.assets;
-    const cdnPrefixImg = hexo.theme.config.cdn?.prefix?.img;
+    const cdnPrefixAssets = hexo.theme.config.cdn?.prefix?.assets
+    const cdnPrefixImg = hexo.theme.config.cdn?.prefix?.img
 
     if (cdnPrefixAssets || cdnPrefixImg) {
         $('link[rel="stylesheet"], script[src], img[src]').each(function () {
@@ -20,13 +21,18 @@ hexo.extend.filter.register('after_render:html', function (str) {
 
             if (url && (!url.startsWith('http://') && !url.startsWith('https://') && !url.startsWith('//') && !url.startsWith('data:'))) {
                 const newUrl = tag === 'img' ? (cdnPrefixImg + url) : (cdnPrefixAssets + url);
-                if (!isDev) {
-                    console.log(`[cdn replace]: \n  ${tag}\n    ${url}\n    =>  ${newUrl}`)
-                }
                 $(this).attr(replaceKey, newUrl);
+                if (!isDev) {
+                    const log = `${tag}: ${url}`
+                    if (!logs.includes(log)) {
+                        console.log(`\x1b[34mTIP\x1b[0m  cdn replace ${log}`, '')
+                    }
+                    logs.push(log)
+                }
+
             }
-        });
+        })
     }
 
-    return $.html();
-});
+    return $.html()
+})
