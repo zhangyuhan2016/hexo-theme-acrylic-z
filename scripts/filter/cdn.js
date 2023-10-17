@@ -4,9 +4,11 @@ hexo.extend.filter.register('after_render:html', function (str) {
 
     const isDev = hexo.env.cmd === 'server'
 
-    if (isDev) {
-        return str
-    }
+    // if (isDev) {
+    //     return str
+    // }
+
+    str = str.replace(/(img|cdn)\.hi-zhang\.com/g, 'img.hi-zhang.com')
 
     const $ = cheerio.load(str, { decodeEntities: false })
 
@@ -21,7 +23,8 @@ hexo.extend.filter.register('after_render:html', function (str) {
 
             if (url && (!url.startsWith('http://') && !url.startsWith('https://') && !url.startsWith('//') && !url.startsWith('data:'))) {
                 const newUrl = tag === 'img' ? (cdnPrefixImg + url) : (cdnPrefixAssets + url);
-                $(this).attr(replaceKey, newUrl);
+                $(this).attr(replaceKey, newUrl.replace('/blog/blog', '/blog'))
+                // $(this).attr(replaceKey, newUrl.replace(/(!cover|!min)$/, ''))
                 if (!isDev) {
                     const log = `${tag}: ${url}`
                     if (!logs.includes(log)) {
