@@ -17,7 +17,7 @@
                     new QRCode(document.getElementById("qrcode"), "<%= page.permalink %>");
                 }
             }
-            window.addEventListener('readystatechange', initContentQrcode);
+            document.addEventListener('readystatechange', initContentQrcode);
             initContentQrcode()
         </script>
     </div>
